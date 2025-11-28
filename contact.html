@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Laura Bloch – Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #f9fafb;
+      --card-bg: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --accent: #f47f00;   /* tweak if you want */
+      --accent-dark: #b52e20;
+      --border: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .card {
+      max-width: 480px;
+      width: 100%;
+      background: radial-gradient(circle at top left, #fffaf3, #ffffff);
+      border-radius: 24px;
+      padding: 28px 24px 24px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+      border: 1px solid var(--border);
+    }
+
+    .header {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 999px;
+      overflow: hidden;
+      border: 2px solid rgba(244, 127, 0, 0.4);
+      flex-shrink: 0;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .name-block h1 {
+      font-size: 1.4rem;
+      margin: 0 0 4px;
+      letter-spacing: 0.02em;
+    }
+
+    .name-block p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .section {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .section-title {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .primary-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 0.95rem;
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
+      transition: transform 0.12s ease, box-shadow 0.12s ease,
+        background-color 0.12s ease, border-color 0.12s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      color: white;
+      box-shadow: 0 10px 25px rgba(181, 46, 32, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(181, 46, 32, 0.45);
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--accent-dark);
+      border-color: rgba(244, 127, 0, 0.4);
+    }
+
+    .btn-outline:hover {
+      background: #fff7ed;
+    }
+
+    .btn span {
+      margin-left: 6px;
+      font-size: 0.9rem;
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 6px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .meta-row strong {
+      color: var(--text);
+      font-weight: 500;
+      margin-right: 4px;
+    }
+
+    .meta-row a {
+      color: var(--accent-dark);
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    .meta-row a:hover {
+      text-decoration: underline;
+    }
+
+    .qr-section {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px dashed var(--border);
+      text-align: center;
+    }
+
+    .qr-section img {
+      width: 120px;
+      height: 120px;
+      display: block;
+      margin: 0 auto 4px;
+    }
+
+    .qr-section p {
+      margin: 0;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    @media (min-width: 540px) {
+      .card {
+        padding: 32px 28px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <header class="header">
+      <div class="avatar">
+        <img
+          src="https://images.squarespace-cdn.com/content/v1/5b69a58a365f028b8d462586/6e5d5b7f-0bc3-483e-9def-a92e9a0f3268/headshot.jpg?format=500w"
+          alt="Headshot of Laura Bloch"
+        />
+      </div>
+      <div class="name-block">
+        <h1>Laura Bloch</h1>
+        <p>Technical product & creative technology</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="section-title">Save my info</div>
+      <div class="primary-actions">
+        <!-- Point href to the hosted .vcf file -->
+        <a class="btn btn-primary" href="LauraBloch.vcf" download>
+          Add to contacts
+        </a>
+        <a class="btn btn-outline" href="mailto:laura.r.bloch@gmail.com">
+          Email me
+        </a>
+      </div>
+      <div class="meta">
+        <div class="meta-row">
+          <strong>Phone</strong> <span>+1 (614) 506-6271</span>
+        </div>
+        <div class="meta-row">
+          <strong>Website</strong>
+          <a href="https://lbloch.com" target="_blank" rel="noopener noreferrer">
+            lbloch.com
+          </a>
+        </div>
+        <div class="meta-row">
+          <strong>LinkedIn</strong>
+          <a
+            href="https://linkedin.com/in/laurarbloch"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            linkedin.com/in/laurarbloch
+          </a>
+        </div>
+        <div class="meta-row">
+          <strong>GitHub</strong>
+          <a
+            href="https://github.com/lrbloch"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            github.com/lrbloch
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="qr-section">
+      <!-- Replace src with the path to your QR image on your host -->
+      <img src="laura_bloch_vcard_qr.png" alt="QR code to save contact for Laura Bloch" />
+      <p>Scan on mobile to add my contact instantly.</p>
+    </section>
+  </main>
+</body>
+</html>
