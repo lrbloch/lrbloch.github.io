@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:4.0
+N:Bloch;Laura;;;
+FN:Laura Bloch
+PHOTO;MEDIATYPE=image/jpeg:https://images.squarespace-cdn.com/content/v1/5b69a58a365f028b8d462586/6e5d5b7f-0bc3-483e-9def-a92e9a0f3268/headshot.jpg?format=1000w
+TEL;TYPE=cell,voice;VALUE=uri:tel:+1-614-506-6271
+EMAIL;TYPE=home,INTERNET:laura.r.bloch@gmail.com
+URL;TYPE=home:https://lbloch.com
+URL;TYPE=work:https://linkedin.com/in/laurarbloch
+URL;TYPE=other:https://github.com/lrbloch
+END:VCARD
